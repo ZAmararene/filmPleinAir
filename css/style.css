@@ -1,0 +1,492 @@
+/*-----------------------------------
+Développeuse: Zina Amararene;
+Titre: Festival de film en plein air à Paris
+Framework: Bootstrap
+Année: 2017
+-------------------------------------*/
+
+/*---------------------
+---  Styles de base 
+-----------------------*/
+
+body{
+	background: url("../images/background.jpg") repeat-y;
+	font-family: 'Kameron', serif;
+	color: #FFF;
+	font-size: 1.6em;
+	margin-top: 100px;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Playfair Display', serif;
+	color: #F89D1C;
+	margin-bottom: 25px;
+}
+
+img{
+	width: 100%;	
+}
+
+#presentation, #contact{
+	background-color: #373737;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+a:hover{
+	text-decoration: none;
+}
+
+/* Fenêtre pop up*/
+#description .modal-header, #description .modal-body, #description .modal-footer{
+	background-color: #373737;
+	color: #FFF;
+}
+
+#description .close{
+	color: #F89D1C;
+}
+
+/*------------------------------------
+Navigation
+-------------------------------------*/
+
+.logo{
+	margin-bottom: 20px;
+}
+
+.logo img{
+	width: 150px;
+}
+
+.navbar, .fond{
+	background-color: #FFF;	
+}
+
+ul a{
+	color: #000;
+	font-size: 1.3em;
+}
+
+.nav>li>a:hover{
+	background-color: transparent;
+	color: #8B551B;
+	font-weight: 700;
+}
+
+.nav>li>a:hover span{
+	border-bottom: 2px solid #000;
+}
+
+.nav .active a{
+	color: #F89D1C;
+	background-color: transparent;
+}
+
+.festival h1{
+	font-family: 'Merienda', cursive, serif;
+	color: #8B551B;
+	font-size: 1.4em;
+	font-weight: 700;
+	padding-top: 20px;	
+}
+
+.navbar-header p{
+	color: #000;
+	font-size: 1em;
+	font-weight: 700;
+	margin-bottom: 0;
+	padding: 10px 0 0 10px;
+}
+
+/* Affichage en noir l'icone de la navigation sur petit écran*/
+.navbar-toggle .icon-bar{
+	background-color: #000;
+}
+
+
+/*------------------------------------
+Baniere
+-------------------------------------*/
+.baniere{
+	height: 550px;
+	padding-top: 60px;
+	margin-bottom: 50px;
+}
+
+.baniere-accueil{
+	background: url("../images/monceau.jpg") no-repeat;
+	background-size: 100%;
+}
+
+.baniere h1{
+	text-transform: uppercase;
+}
+
+.baniere p{
+	color: #FFF;
+	font-size: 1.3em;
+}
+
+.baniere .slogan{
+	padding-left: 150px;
+}
+
+/* Lignes horizontales sur côté gauche et droit du titre de l'association*/
+.plein-air h2::before, .plein-air h3::before{
+	border-bottom: 1px solid #F89D1C;
+	width: 100%;
+	content: "";
+	display: block;
+	position: absolute;
+	top: 60%;
+	padding: 0 50px;
+}
+
+.plein-air h2 span, .plein-air h3 span{
+	background: url("../images/background.jpg") 50% 50%;
+	position: relative;
+	z-index: 1;
+	padding: 0 20px;
+}
+
+.plein-air h2{
+	font-family: 'Merienda', cursive, serif;
+}
+
+.bordure{
+	height: 10px;
+	border-top: 1px solid #F89D1C;
+}
+
+
+#presentation, #contact, #maps, #derniers-articles, .programmation{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+#presentation .btn-default.active, #contact .btn-default, 
+#derniers-articles .btn-default, .programmation .btn-default, #programmation .btn-default, #inscription .btn-default,
+.programmation .btn-default:hover, .modal-footer .btn-default{
+	background-color: #373737;
+	border-radius: 0;
+	color: #F89D1C;
+	margin-top: 32px;
+}
+
+#derniers-articles .synopsis{
+	padding-top: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 200px;
+}
+
+/*------------------------------------
+Fil d'ariane
+-------------------------------------*/
+
+.fil-d-ariane{
+	font-size: 1.2em;
+	margin-bottom: 35px;
+}
+
+.fil-d-ariane a{
+	color: #FFF;
+}
+
+.fil-d-ariane a:hover, .fil-d-ariane .sup{
+	color: #F89D1C;
+}
+
+/*------------------------------------
+Contact
+-------------------------------------*/
+.baniere-contact{
+	background: url("../images/notre_dame_de_paris.jpg") no-repeat;
+	background-size: 100%;
+}
+
+#contact .form-control{
+	background-color: #373737;
+	border: none;
+	border-bottom: 1px solid #FFF;
+	border-radius: 0;
+	color: #FFF;
+}
+
+#contact .form-control:focus{
+	box-shadow: none;
+}
+
+.contact span, .inscription span, #maps .email{
+	color: #F89D1C;
+}
+
+#derniers-articles p{
+	height: 250px;
+}
+#infos .modal-content{
+	color: #000;
+	width: 800px;
+	margin: 0 auto;
+}
+
+.maps iframe{
+	width: 100%;
+	border: 0;
+	height: 450px;
+}
+
+/************************
+Films
+*************************/
+
+.programmation, #programmation{
+	background-color: #373737;
+	padding: 15px 0;
+}
+
+.programmation h2{
+	color: #000;
+	font-weight: 700;
+}
+
+.programmation a, #programmation a{
+	color: #F89D1C;
+}
+
+#programmation iframe{
+	width: 100%; 
+	height: 480px; 
+}
+
+.baniere-film{
+	background: url("../images/louvre_nuit.jpg") no-repeat;
+	background-size: 100%;
+}
+
+.recherche .form-control{
+	border-radius: 0;
+	background-color: transparent;
+	color: #FFF;
+	margin-bottom: 10px;
+}
+
+.recherche .btn-default{
+	border-radius: 0;
+	color: #F89D1C;
+	background-color: transparent;
+	margin-bottom: 10px;
+}
+
+.recherche .form-control:focus{
+	box-shadow: none;
+}
+
+.programmation .partage-film{
+	color: #8B551B;
+	font-weight: 700;
+}
+
+/************************
+Inscription
+*************************/
+
+#inscription .partage-sociaux img{
+	margin: 20px 0;
+}
+
+#inscription .partage-sociaux a{
+	color: #8B551B;
+	margin-right: 20px;	
+	
+}
+
+#inscription .form-group input, #inscription .form-group select{
+	background-color: transparent;
+	color: #FFF;
+	border-color: #F89D1C;
+}
+
+#inscription .form-group select{
+	color: #F89D1C;
+}
+
+/************************
+Actualités
+*************************/
+
+.actualite a{
+	display: inline-block;
+	color: #F89D1C;
+	margin: 15px 0;
+}
+
+.actualite .synopsis{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 90px;
+}
+
+.baniere-actualite{
+	background: url("../images/louvre.jpg") no-repeat;
+	background-size: 100%;
+}
+
+#detail-film img{
+	height: 250px;
+}
+
+#detail-film a{
+	color: #FFF;
+}
+
+#detail-film a:hover{
+	color: #8B551B;
+}
+
+.pagination li a{
+	color: #F89D1C;
+}
+
+.pagination li{
+	border-radius: 0;
+}
+
+.recherche-actualite{
+	margin-bottom: 30px;
+}
+
+/*----------------
+-----  Footer
+-------------------*/
+footer{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-top: 30px;
+	/*background-color: #3A3026;*/
+	background-color: rgba(58,48,39);
+	background-color: rgba(58,48,39,.4);
+}
+
+footer p{
+	font-weight: 700;
+}
+
+footer .reseaux-sociaux a{
+	color: #FFF;
+	margin-right: 20px;
+}
+
+footer .form-control{
+	background-color: none;
+}
+
+footer .mentions-legales{
+	margin-top: 20px;
+}
+
+
+/************************
+Media queries
+*************************/
+
+@media (max-width: 767px){
+
+	body{
+		margin-top: 50px;
+	}
+
+	.plein-air h2::before, .plein-air h3::before{
+	border-bottom: none;
+	}
+
+	.plein-air h2{
+		font-size: 1.4em;
+		line-height: 1.5em;
+	}
+
+	.baniere{
+		height: 200px;
+		padding-top: 0px;
+		margin-bottom: 0px;
+	}
+
+	#derniers-articles h3{
+		text-align: left;
+	}
+
+	.logo_smartphone img{
+		width: 80px;
+	}
+
+	.navbar-collapse ul li a{	
+		text-align: left;
+	}
+
+	.pagination a{
+		font-size: 1em;
+	}
+
+	.img-contact{
+		margin-bottom: 20px;
+	}
+
+	/* Fenêtre pop up*/
+	#description .modal-header h1{
+		font-size: 1.3em;
+	}
+
+	#infos .modal-content{
+		width: 100%;
+	}
+
+	footer p{
+		font-size: 0.9em;
+		margin-top: 10px;
+	}
+
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+	
+	.plein-air h3::before{
+		border-bottom: none;
+	}
+
+	.baniere{
+		height: 300px;
+	}
+
+	.baniere .slogan{
+		padding-left: 100px;
+	}
+
+	#detail-film img{
+		height: 150px;
+	}
+
+	/* Fenêtre pop up*/
+	#infos .modal-content{
+		width: 100%;
+	}
+
+	.festival h1{
+		font-size: 1.1em;
+	}
+
+}
+
+@media (min-width: 992px) and (max-width: 1024px){
+	.actualite a{
+		font-size: 0.9em;
+	}
+	
+}
+
+
+
+
+
+
+
